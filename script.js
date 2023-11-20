@@ -33,5 +33,23 @@ if (oddOrEven(sumGameNumber) == userGameChoose){
 
 // Palidroma:
 // Chiedere all’utente di inserire una parola
+const userWord = prompt('type a word');
+console.log(palindromaCheck(userWord));
+
 // Creare una funzione per capire se la parola inserita è palindroma
-// E' vietato usare split(), reverse() e simili.
+function palindromaCheck(word){
+  const wordArray = word.split('');
+  let reverseWordArray = [];
+  let reverseWord = '';
+  for (let i = wordArray.length; i > 0; i--){
+    reverseWordArray.push(wordArray[i-1]);
+  }
+  for (let i = 0; i<reverseWordArray.length; i++){
+    reverseWord += reverseWordArray[i]
+  }
+  if(word === reverseWord){
+    return 'palindroma'
+  } else {
+    return 'non palindroma'
+  }
+}
