@@ -38,12 +38,12 @@ console.log(palindromaCheck(userWord));
 
 // Trasformare stringa in array
 function stringToArray(string){
-  const array = [];
+  const arrayFromString = [];
   for (let i = 0; i < string.length; i++) {
     let str = string.charAt(i)
-    array.push(str)
+    arrayFromString.push(str)
   }
-  return array
+  return arrayFromString
 }
 
 // Creare una funzione per capire se la parola inserita è palindroma
