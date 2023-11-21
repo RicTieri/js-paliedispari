@@ -36,9 +36,19 @@ if (oddOrEven(sumGameNumber) == userGameChoose){
 const userWord = prompt('type a word');
 console.log(palindromaCheck(userWord));
 
+// Trasformare stringa in array
+function stringToArray(string){
+  const array = [];
+  for (let i = 0; i < string.length; i++) {
+    let str = string.charAt(i)
+    array.push(str)
+  }
+  return array
+}
+
 // Creare una funzione per capire se la parola inserita è palindroma
 function palindromaCheck(word){
-  const wordArray = word.split('');
+  const wordArray = stringToArray(word);
   let reverseWordArray = [];
   let reverseWord = '';
   for (let i = wordArray.length; i > 0; i--){
