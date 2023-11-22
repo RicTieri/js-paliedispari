@@ -6,7 +6,7 @@ const userGameNumber = parseInt(prompt('choose a number betwen 1 and 5'));
 const pcGameNumber = randomNumber(1, 5);
 
 function randomNumber(min, max){
-  return Math.floor(Math.random(max - min + 1) + min)
+  return Math.floor(Math.random()*(max - min + 1) + min)
 }
 // Sommiamo i due numeri
 const sumGameNumber = userGameChoose + pcGameNumber
